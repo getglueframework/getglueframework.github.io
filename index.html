@@ -1,0 +1,1028 @@
+<html>
+<head>
+	<meta charset="utf-8" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 	<meta name="description" content="Glue Framework, Simple Flat CSS Framework">
+  	<meta name="author" content="Adi Sparta">
+ 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Glue Framework</title>
+	<link rel="stylesheet" type="text/css" href="font-awesome-4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="google-code-prettify/prettify.css">
+	<link rel="stylesheet" href="google-code-prettify/tomorrow.css">
+	<link rel="shortcut icon" href="favico.png" type="image/x-icon" />
+
+	
+  
+	<script src="google-code-prettify/prettify.js"></script>
+	<script src="js/jquery-2.1.3.min.js"></script>
+	<script src="js/glue.min.js"></script>
+
+	<script type="text/javascript">
+		
+		$(document).ready(function(){var o=$(".nav-custom").offset().top;$(window).scroll(function(){var s=$(window).scrollTop();s>=o?($(".nav-custom").addClass("fixed"),$(".nav-custom").addClass("dark"),$(".nav-custom").removeClass("border")):($(".nav-custom").removeClass("fixed"),$(".nav-custom").removeClass("dark"),$(".nav-custom").addClass("border"))})});
+	
+	</script>
+	
+</head>
+<body onload="prettyPrint()">
+	
+<!-- Blue banner -->
+<div class="banner">
+	<div class="banner-logo">
+		<div class="logo">
+			G
+		</div>
+		
+	</div>
+	<div class="caption">
+		<h1><span class="blue">Glue</span> Framework</h1>
+		<a href="asset/glue-framework-unstable-v1.zip"><button class="button button-rounded-primary">Download Unstable Version</button></a>
+	</div>
+</div>
+
+<!-- Navigation -->
+	<nav class="nav-custom">
+		<div class="container">
+			<div class="handle" id="handle">
+				<span class="bars">
+					<li class="fa fa-bars"></li>
+				</span>
+				Menu
+			</div>
+
+			<ul class="menu">
+				<div id="links">
+			        <li><a href="#intro">Intro</a></li>
+			        <li><a href="#grid">Grid</a></li>  
+			        <li><a href="#button">Button</a></li>  
+			        <li><a href="#thumbnail">Thumbnail</a></li>  
+			        <li><a href="#form">Form</a></li>  
+			        <li><a href="#navbar">Navbar</a></li>  
+			        <li><a href="#accordian">Accordian</a></li>  
+			        <li><a href="#tabs">Tabs</a></li>  
+		        </div>
+		    </ul>
+    	</div>
+    </nav>
+<br>
+<div class="container">
+	<!-- Intro -->
+	<div class="intro" id="intro">
+		<p>Glue is one of the CSS framework that uses flat theme. <b>Why should use glue?</b> Because it's made so minimal which only contains the core components needed in a responsive website. Currently, the glue is still in the unstable version and still under development.</p>
+		<p>
+		We use font Awesome for the icon and its just <a target="blank" href="http://fortawesome.github.io/Font-Awesome/">here</a>.
+		</p>
+
+
+	</div>
+	
+	<hr>
+<div id="grid">
+	<h3>Grid</h3>
+	<p>Grid in Glue is commonly used in the development of a website. The size of the grid we've set so pleasing to be loaded on the desktop or mobile.</p>
+
+		<!-- Grid preview -->
+			<div class="example">
+				<div class="row">
+					<div class="grid-3-of-3">
+						grid-3-of-3
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="grid-1-of-2">
+						grid-1-of-2
+					</div>
+					<div class="grid-1-of-2">
+						grid-1-of-2
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="grid-1-of-3">
+						grid-1-of-3
+					</div>
+					<div class="grid-1-of-3">
+						grid-1-of-3
+					</div>
+					<div class="grid-1-of-3">
+						grid-1-of-3
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="grid-2-of-3">
+						grid-2-of-3
+					</div>
+					<div class="grid-1-of-3">
+						grid-1-of-3
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="grid-1-of-4">
+						grid-1-of-4
+					</div>
+					<div class="grid-1-of-4">
+						grid-1-of-4
+					</div>
+					<div class="grid-1-of-4">
+						grid-1-of-4
+					</div>
+					<div class="grid-1-of-4">
+						grid-1-of-4
+					</div>
+
+				</div>
+				<div class="row">
+					<div class="grid-1-of-2">
+						grid-2-of-4
+					</div>
+					<div class="grid-1-of-4">
+						grid-1-of-4
+					</div>
+					<div class="grid-1-of-4">
+						grid-1-of-4
+					</div>
+				</div>
+				<div class="row">
+					<div class="grid-75-of-100">
+						grid-75-of-100
+					</div>
+					<div class="grid-25-of-100">
+						grid-25-of-100
+					</div>
+				</div>
+			</div>
+		<!-- End grid preview -->
+		<!-- Div code example -->
+		<div class="row">
+			<div class="grid-1-of-2">
+				To use it, You just need to call the class <b>"grid-"</b> which in a row should be made class <b>"row"</b> as presented next. You just have to adjust the grid name is displayed above.
+				To wrapped the body, you can make class <b>"container"</b> inside your html.
+			</div>
+	
+			<div class="grid-1-of-2">
+				<div class="code">
+					<pre class="prettyprint" style="border: none;">
+&lt;div class="container"&gt;
+	&lt;div class="row"&gt;                        
+		&lt;div class="grid-3-of-3"&gt;
+			grid-3-of-3
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="row"&gt;
+		&lt;div class="grid-1-of-2"&gt;
+			grid-1-of-2
+		&lt;/div&gt;
+		&lt;div class="grid-1-of-2"&gt;
+			grid-1-of-2
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+				</pre>
+				</div>
+			</div>
+		</div>
+		<!-- end grid code example -->
+</div>
+<hr>
+<div id="button">
+	<h3>Button</h3>
+	<p>Just click it!</p>
+	
+	<!-- Button preview -->
+	<div class="row">
+		<div class="grid-1-of-2 example">
+			<h5>Button Flat Style</h5>
+				<button class="button button-primary">Primary</button>
+				<button class="button button-secondary">Secondary</button>
+				<button class="button button-orange">Orange</button>
+				<button class="button button-success">Success</button>
+				<button class="button button-danger">Danger</button>
+				<button class="button button-night">Night</button>
+				<button class="button button-dark">Dark</button>
+		</div>
+		<div class="grid-1-of-2">
+			<div class="code">
+				<pre class="prettyprint" style="border: none;">
+&lt;!-- Adding link to button --&gt;
+&lt;a href="#"&gt;&lt;button class="button button-rounded-primary"&gt;Download Unstable Version&lt;/button&gt;&lt;/a&gt;
+
+&lt;button class="button button-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="button button-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button class="button button-orange"&gt;Orange&lt;/button&gt;
+&lt;button class="button button-success"&gt;Success&lt;/button&gt;
+&lt;button class="button button-danger"&gt;Danger&lt;/button&gt;
+&lt;button class="button button-night"&gt;Night&lt;/button&gt;
+&lt;button class="button button-dark"&gt;Dark&lt;/button&gt;
+				</pre>
+			</div>
+			
+		</div>
+	</div>
+	<div class="row">
+		<div class="grid-1-of-2">
+			<div class="code">
+				<pre class="prettyprint" style="border: none;">
+&lt;button class="button button-rounded-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="button button-rounded-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button class="button button-rounded-orange"&gt;Orange&lt;/button&gt;
+&lt;button class="button button-rounded-success"&gt;Success&lt;/button&gt;
+&lt;button class="button button-rounded-danger"&gt;Danger&lt;/button&gt;
+&lt;button class="button button-rounded-night"&gt;Night&lt;/button&gt;
+&lt;button class="button button-rounded-dark"&gt;Dark&lt;/button&gt;
+				</pre>
+			</div>
+			
+		</div>
+		<div class="grid-1-of-2 example">
+			<h5>Button Rounded Style</h5>
+				<button class="button button-rounded-primary">Primary</button>
+				<button class="button button-rounded-secondary">Secondary</button>
+				<button class="button button-rounded-orange">Orange</button>
+				<button class="button button-rounded-success">Success</button>
+				<button class="button button-rounded-danger">Danger</button>
+				<button class="button button-rounded-night">Night</button>
+				<button class="button button-rounded-dark">Dark</button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="grid-1-of-2 example">
+			<h5>Button Flat Style</h5>
+				<button class="button button-flat-border-primary">Primary</button>
+				<button class="button button-flat-border-secondary">Secondary</button>
+				<button class="button button-flat-border-orange">Orange</button>
+				<button class="button button-flat-border-success">Success</button>
+				<button class="button button-flat-border-danger">Danger</button>
+				<button class="button button-flat-border-night">Night</button>
+				<button class="button button-flat-border-dark">Dark</button>
+		</div>
+		<div class="grid-1-of-2">
+			<div class="code">
+				<pre class="prettyprint" style="border: none;">
+&lt;button class="button button-flat-border-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="button button-flat-border-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button class="button button-flat-border-orange"&gt;Orange&lt;/button&gt;
+&lt;button class="button button-flat-border-success"&gt;Success&lt;/button&gt;
+&lt;button class="button button-flat-border-danger"&gt;Danger&lt;/button&gt;
+&lt;button class="button button-flat-border-night"&gt;Night&lt;/button&gt;
+&lt;button class="button button-flat-border-dark"&gt;Dark&lt;/button&gt;
+				</pre>
+			</div>
+		</div>
+	</div>
+	<!-- End Button -->
+</div>
+<hr>
+<div id="thumbnail">
+	<h3>Thumbnail</h3>
+	<p>We make three kinds of thumbnails that you can adjust to your gallery website.</p>
+
+	<!-- Thumbnail preview -->
+	<div class="row"> 
+		<div class="grid-1-of-3">
+			<div class="thumbnail bordered">
+				<div class="thumbnail-wrapper ">
+					<div class="img-wrapper">
+						<img src="http://placehold.it/1000x500">
+					</div>
+					<div class="thumbnail-content">
+						<h3>One</h3>
+						Your description here.
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="grid-2-of-3">
+			<div class="code thumbnail">
+				<pre class="prettyprint" style="border: none;">
+		&lt;div class="thumbnail bordered"&gt;
+			&lt;div class="thumbnail-wrapper "&gt;
+				&lt;div class="img-wrapper"&gt;
+					&lt;img src="http://placehold.it/1000x500"&gt;
+				&lt;/div&gt;
+				&lt;div class="thumbnail-content"&gt;
+					&lt;h3&gt;One&lt;/h3&gt;
+					Content
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+				</pre>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="grid-2-of-3">
+			<div class="code thumbnail">
+				<pre class="prettyprint" style="border: none;">
+		&lt;div class="thumbnail"&gt;
+			&lt;div class="thumbnail-wrapper"&gt;
+				&lt;div class="img-wrapper rounded "&gt;
+					&lt;img src="http://placehold.it/1000x500"&gt;
+				&lt;/div&gt;
+				&lt;div class="thumbnail-content"&gt;
+					&lt;h3&gt;One&lt;/h3&gt;
+					Content
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+				</pre>
+			</div>
+		</div>
+		<div class="grid-1-of-3">
+			<div class="thumbnail">
+				<div class="thumbnail-wrapper">
+					<div class="img-wrapper rounded ">
+						<img src="http://placehold.it/1000x500">
+					</div>
+					<div class="thumbnail-content">
+						<h3>Two</h3>
+						Your description here.
+					</div>
+
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="grid-1-of-3">
+			<div class="thumbnail">
+				<div class="thumbnail-wrapper">
+					<div class="img-wrapper bordered">
+						<img src="http://placehold.it/1000x500">
+					</div>
+					<div class="thumbnail-content">
+						<h3>Three</h3>
+						Your description here.
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="grid-2-of-3">
+			<div class="code thumbnail">
+				<pre class="prettyprint" style="border: none;">
+		&lt;div class="thumbnail"&gt;
+			&lt;div class="thumbnail-wrapper"&gt;
+				&lt;div class="img-wrapper bordered"&gt;
+					&lt;img src="http://placehold.it/1000x500"&gt;
+				&lt;/div&gt;
+				&lt;div class="thumbnail-content"&gt;
+					&lt;h3&gt;One&lt;/h3&gt;
+					Content
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+				</pre>
+			</div>
+		</div>
+	</div>
+	<!-- End Thumbnail preview -->
+</div>
+<hr>
+<div id="form">
+	<h3>Form</h3>
+	<p>This id kind of form that we have. We made as simple as possible.</p>
+
+	<!-- form preview -->
+	<div class="row">
+		<div class="grid-1-of-2">
+			<div class="field-wrapper">
+				<input type="text" placeholder="Text">
+			</div>
+			<div class="field-wrapper">
+				<input type="password" placeholder="Password">
+			</div>
+			<div class="field-wrapper">
+				<input type="email" placeholder="Email">
+			</div>
+			<div class="field-wrapper">
+				<textarea placeholder="Textarea"></textarea>
+			</div>
+			<div class="field-wrapper">
+				<div class="label-box-success">
+					SUCCESS : Your success message
+				</div>
+			</div>
+			<div class="field-wrapper">
+				<div class="label-box-warning">
+					WARNING : Your warning message
+				</div>
+			</div>
+			<div class="field-wrapper">
+				<div class="label-box-error">
+					ERROR : Your error message
+				</div>
+			</div>
+			<div class="field-wrapper">
+				<div class="label-box-notif">
+					NOTIF : Your notification message
+				</div>
+			</div>
+		</div>
+	
+		<div class="grid-1-of-2">
+			<div class="code" style="max-height: 500px;">
+				<pre class="prettyprint" style="border: none;">
+	&lt;div class="field-wrapper"&gt;
+		&lt;input type="text" placeholder="Text"&gt;
+	&lt;/div&gt;
+	&lt;div class="field-wrapper"&gt;
+		&lt;input type="password" placeholder="Password"&gt;
+	&lt;/div&gt;
+	&lt;div class="field-wrapper"&gt;
+		&lt;input type="email" placeholder="Email"&gt;
+	&lt;/div&gt;
+	&lt;div class="field-wrapper"&gt;
+		&lt;textarea placeholder="Textarea"&gt;&lt;/textarea&gt;
+	&lt;/div&gt;
+
+	&lt;!--
+	    Label Box
+	--&gt;
+	&lt;div class="field-wrapper"&gt;
+		&lt;div class="label-box-success"&gt;
+			SUCCESS : Your success message
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="field-wrapper"&gt;
+		&lt;div class="label-box-warning"&gt;
+			WARNING : Your warning message
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="field-wrapper"&gt;
+		&lt;div class="label-box-error"&gt;
+			ERROR : Your error message
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="field-wrapper"&gt;
+		&lt;div class="label-box-notif"&gt;
+			NOTIF : Your notification message
+		&lt;/div&gt;
+	&lt;/div&gt;
+				</pre>
+			</div>
+		</div>
+	</div>
+	<!-- end form -->
+</div>
+<hr>
+<div id="navbar">
+	<h3>Navbar</h3>
+	<p>We make three kinds of navbar. And we liked the color.</p>
+	
+	<!-- navbar preview -->
+	<div class="row">
+		<div class="grid-3-of-3">
+			<h5>Unstyled Navbar</h5><br />
+			<nav>
+				<div class="handle" id="handle">
+					<span class="bars">
+						<li class="fa fa-bars"></li>
+					</span>
+					Menu
+				</div>
+
+				<ul class="menu">
+					
+			        <li><a href="#">Menu 1</a>
+			            <ul class="submenu">
+			                <li><a href="#">Sub Menu 1</a></li>
+			                <li><a href="#">Sub Menu 1</a></li>
+			            </ul>
+			        </li>
+			        <li><a href="#">Menu 2</a>
+			            <ul class="submenu">
+			                <li><a href="#">Sub menu 1</a></li>
+			                <li><a href="#">Level 3 menu</a>
+			                    <ul>
+			                        <li><a href="#">Sub menu 4</a></li>
+			                        <li><a href="#">Sub menu 4</a></li>
+			                    </ul>
+			                </li>
+			            </ul>
+			        </li>
+			        <li><a href="#">Menu 3</a></li>
+			        <li><a href="#">Menu 4</a></li>  
+			    </ul>
+		    </nav>
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="grid-3-of-3">
+			<div class="code nav">
+				<pre class="prettyprint" style="border: none;">
+&lt;nav&gt;
+	&lt;div class="handle" id="handle"&gt;
+		&lt;span class="bars"&gt;
+			&lt;li class="fa fa-bars"&gt;&lt;/li&gt;
+		&lt;/span&gt;
+		Menu
+	&lt;/div&gt;
+	&lt;ul class="menu"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Menu 1&lt;/a&gt;
+            &lt;ul class="submenu"&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Sub Menu 1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Sub Menu 1&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Menu 2&lt;/a&gt;
+            &lt;ul class="submenu"&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Sub menu 1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Level 3 menu&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Sub menu 4&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Sub menu 4&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Menu 3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Menu 4&lt;/a&gt;&lt;/li&gt;  
+    &lt;/ul&gt;
+&lt;/nav&gt;
+				</pre>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="grid-3-of-3">
+			<h5>Light Theme </h5><br />
+			<nav class="light">
+				<div class="handle" id="handle">
+					<span class="bars">
+						<li class="fa fa-bars"></li>
+					</span>
+					Menu
+				</div>
+
+				<ul class="menu">
+					
+			        <li><a href="#">Menu 1</a>
+			            <ul class="submenu">
+			                <li><a href="#">Sub Menu 1</a></li>
+			                <li><a href="#">Sub Menu 1</a></li>
+			            </ul>
+			        </li>
+			        <li><a href="#">Menu 2</a>
+			            <ul class="submenu">
+			                <li><a href="#">Level 3 menu</a>
+			                    <ul>
+			                        <li><a href="#">Sub menu 4</a></li>
+			                        <li><a href="#">Sub menu 4</a></li>
+			                    </ul>
+			                </li>
+			                <li><a href="#">Sub menu 1</a></li>
+			            </ul>
+			        </li>
+			        <li><a href="#">Menu 3</a></li>
+			        <li><a href="#">Menu 4</a></li>  
+			    </ul>
+		    </nav>
+		</div>
+	</div>
+	<div class="row">
+		<div class="grid-3-of-3">
+			<div class="code nav">
+				<pre class="prettyprint" style="border: none;">
+&lt;!-- 
+    Simply, just add class "light" to nav
+--&gt;
+&lt;nav class="light"&gt;
+				</pre>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="grid-3-of-3">
+			<h5>Blue Theme </h5><br />
+			<nav class="blue">
+				<div class="handle" id="handle">
+					<span class="bars">
+						<li class="fa fa-bars"></li>
+					</span>
+					Menu
+				</div>
+
+				<ul class="menu">
+					
+			        <li><a href="#">Menu 1</a>
+			            <ul class="submenu">
+			                <li><a href="#">Sub Menu 1</a></li>
+			                <li><a href="#">Sub Menu 1</a></li>
+			            </ul>
+			        </li>
+			        <li><a href="#">Menu 2</a>
+			            <ul class="submenu">
+			                <li><a href="#">Level 3 menu</a>
+			                    <ul>
+			                        <li><a href="#">Sub menu 4</a></li>
+			                        <li><a href="#">Sub menu 4</a></li>
+			                    </ul>
+			                </li>
+			                <li><a href="#">Sub menu 1</a></li>
+			            </ul>
+			        </li>
+			        <li><a href="#">Menu 3</a></li>
+			        <li><a href="#">Menu 4</a></li>  
+			    </ul>
+		    </nav>
+		</div>
+	</div>
+	<div class="row">
+		<div class="grid-3-of-3">
+			<div class="code nav">
+				<pre class="prettyprint" style="border: none;">
+&lt;!-- 
+    Simply, just add class "blue" to nav
+--&gt;
+&lt;nav class="blue"&gt;
+				</pre>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="grid-3-of-3">
+			<h5>Dark Theme </h5><br />
+			<nav class="dark">
+				<div class="handle" id="handle">
+					<span class="bars">
+						<li class="fa fa-bars"></li>
+					</span>
+					Menu
+				</div>
+
+				<ul class="menu">
+					
+			        <li><a href="#">Menu 1</a>
+			            <ul class="submenu">
+			                <li><a href="#">Sub Menu 1</a></li>
+			                <li><a href="#">Sub Menu 1</a></li>
+			            </ul>
+			        </li>
+			        <li><a href="#">Menu 2</a>
+			            <ul class="submenu">
+			                <li><a href="#">Level 3 menu</a>
+			                    <ul>
+			                        <li><a href="#">Sub menu 4</a></li>
+			                        <li><a href="#">Sub menu 4</a></li>
+			                    </ul>
+			                </li>
+			                <li><a href="#">Sub menu 1</a></li>
+			            </ul>
+			        </li>
+			        <li><a href="#">Menu 3</a></li>
+			        <li><a href="#">Menu 4</a></li>  
+			    </ul>
+		    </nav>
+		</div>
+	</div>
+	<div class="row">
+		<div class="grid-3-of-3">
+			<div class="code nav">
+				<pre class="prettyprint" style="border: none;">
+&lt;!-- 
+    Simply, just add class "dark" to nav
+--&gt;
+&lt;nav class="dark"&gt;
+				</pre>
+			</div>
+		</div>
+	</div>
+	<!-- end navbar -->
+</div>
+<hr>
+<div id="accordian">
+	<h3>Accordian Navbar</h3>
+	<p>This just three kind of accordian navbar and we loved it too.</p>
+
+	<div class="row">
+		<h5>Unstyled Accordian</h5>
+		<div class="grid-1-of-2">
+			
+			<div class="accordian-navbar">
+				<ul>
+					<li>
+						<h3>Menu 1</h3>
+						<ul>
+							<li><a href="#">Sub Menu</a></li>
+							<li><a href="#">Sub Menu</a></li>
+							<li><a href="#">Sub Menu</a></li>
+							<li><a href="#">Sub Menu</a></li>
+						</ul>
+					</li>
+					<!-- add "active" class to menu that will expand automaticly when webpage load --> 
+					<li class="active"> 
+						<h3>Menu 2</h3>
+						<ul>
+							<li><a href="#">Sub Menu</a></li>
+							<li><a href="#">Sub Menu</a></li>
+							<li><a href="#">Sub Menu</a></li>
+							<li><a href="#">Sub Menu</a></li>
+						</ul>
+					</li>
+					<li>
+						<h3>Menu 3</h3>
+						<ul>
+							<li><a href="#">Sub Menu</a></li>
+							<li><a href="#">Sub Menu</a></li>
+						</ul>
+					</li>
+					<li>
+						<h3>menu 4</h3>
+						<ul>
+							<li><a href="#">Sub Menu</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="grid-1-of-2">
+			<div class="code thumbnail">
+				<pre class="prettyprint" style="border: none;">
+	&lt;div class="accordian-navbar"&gt;
+		&lt;ul&gt;
+			&lt;li&gt;
+				&lt;h3&gt;Menu 1&lt;/h3&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href="#"&gt;Sub Menu&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="#"&gt;Sub Menu&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="#"&gt;Sub Menu&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="#"&gt;Sub Menu&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;
+			&lt;!-- add "active" class to menu that will expand automaticly when webpage load --&gt; 
+			&lt;li class="active"&gt; 
+				&lt;h3&gt;Menu 2&lt;/h3&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href="#"&gt;Sub Menu&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="#"&gt;Sub Menu&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="#"&gt;Sub Menu&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="#"&gt;Sub Menu&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;
+			&lt;li&gt;
+				&lt;h3&gt;Menu 3&lt;/h3&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href="#"&gt;Sub Menu&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="#"&gt;Sub Menu&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;
+			&lt;li&gt;
+				&lt;h3&gt;menu 4&lt;/h3&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href="#"&gt;Sub Menu&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+				</pre>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<h5>Light Accordian</h5>
+		<div class="grid-1-of-2">
+			<div class="accordian-navbar accordian-light">
+				<ul>
+					<li>
+						<h3>Menu 1</h3>
+						<ul>
+							<li><a href="#">Sub Menu</a></li>
+							<li><a href="#">Sub Menu</a></li>
+							<li><a href="#">Sub Menu</a></li>
+							<li><a href="#">Sub Menu</a></li>
+						</ul>
+					</li>
+					
+					<li> 
+						<h3>Menu 2</h3>
+						<ul>
+							<li><a href="#">Sub Menu</a></li>
+							<li><a href="#">Sub Menu</a></li>
+							<li><a href="#">Sub Menu</a></li>
+							<li><a href="#">Sub Menu</a></li>
+						</ul>
+					</li>
+					<li>
+						<h3>Menu 3</h3>
+						<ul>
+							<li><a href="#">Sub Menu</a></li>
+							<li><a href="#">Sub Menu</a></li>
+						</ul>
+					</li>
+					<li>
+						<h3>menu 4</h3>
+						<ul>
+							<li><a href="#">Sub Menu</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="grid-1-of-2">
+			<div class="code thumbnail">
+				<pre class="prettyprint" style="border: none;">
+	&lt;!-- 
+	    Just add class "accordian-light" in "accordian-navbar"
+	--&gt;
+	&lt;div class="accordian-navbar accordian-light"&gt;
+				</pre>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<h5>Blue Accordian</h5>
+		<div class="grid-1-of-2">
+			<div class="accordian-navbar accordian-blue">
+				<ul>
+					<li>
+						<h3>Menu 1</h3>
+						<ul>
+							<li><a href="#">Sub Menu</a></li>
+							<li><a href="#">Sub Menu</a></li>
+							<li><a href="#">Sub Menu</a></li>
+							<li><a href="#">Sub Menu</a></li>
+						</ul>
+					</li>
+					
+					<li> 
+						<h3>Menu 2</h3>
+						<ul>
+							<li><a href="#">Sub Menu</a></li>
+							<li><a href="#">Sub Menu</a></li>
+							<li><a href="#">Sub Menu</a></li>
+							<li><a href="#">Sub Menu</a></li>
+						</ul>
+					</li>
+					<li>
+						<h3>Menu 3</h3>
+						<ul>
+							<li><a href="#">Sub Menu</a></li>
+							<li><a href="#">Sub Menu</a></li>
+						</ul>
+					</li>
+					<li>
+						<h3>menu 4</h3>
+						<ul>
+							<li><a href="#">Sub Menu</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="grid-1-of-2">
+			<div class="code thumbnail">
+				<pre class="prettyprint" style="border: none;">
+	&lt;!-- 
+	    Just add class "accordian-blue" in "accordian-navbar"
+	--&gt;
+	&lt;div class="accordian-navbar accordian-blue"&gt;
+				</pre>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<h5>Dark Accordian</h5>
+		<div class="grid-1-of-2">
+			<div class="accordian-navbar accordian-dark">
+				<ul>
+					<li>
+						<h3>Menu 1</h3>
+						<ul>
+							<li><a href="#">Sub Menu</a></li>
+							<li><a href="#">Sub Menu</a></li>
+							<li><a href="#">Sub Menu</a></li>
+							<li><a href="#">Sub Menu</a></li>
+						</ul>
+					</li>
+					
+					<li> 
+						<h3>Menu 2</h3>
+						<ul>
+							<li><a href="#">Sub Menu</a></li>
+							<li><a href="#">Sub Menu</a></li>
+							<li><a href="#">Sub Menu</a></li>
+							<li><a href="#">Sub Menu</a></li>
+						</ul>
+					</li>
+					<li>
+						<h3>Menu 3</h3>
+						<ul>
+							<li><a href="#">Sub Menu</a></li>
+							<li><a href="#">Sub Menu</a></li>
+						</ul>
+					</li>
+					<li>
+						<h3>menu 4</h3>
+						<ul>
+							<li><a href="#">Sub Menu</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="grid-1-of-2">
+			<div class="code thumbnail">
+				<pre class="prettyprint" style="border: none;">
+	&lt;!-- 
+	    Just add class "accordian-dark" in "accordian-navbar"
+	--&gt;
+	&lt;div class="accordian-navbar accordian-dark"&gt;
+				</pre>
+			</div>
+		</div>
+	</div>
+	<!-- Tabs -->
+</div>
+<hr>
+<dv id="tabs">
+	<h3>Tabs</h3>
+	<p>The last is tabs and its smooth transition effect.</p> <br>
+
+	<div class="row">
+			<div class="grid-3-of-3">
+				<div class="tab-panel">
+					<ul class="tab-links">
+						<li class="active" rel="tab1">Tab1</li>
+						<li rel="tab2">Tab2</li>
+						<li rel="tab3">Tab3</li>
+						
+					</ul>
+					<div class="tab-content">
+				        <div id="tab1" class="tab active">
+				            <p>Tab #1 content goes here!</p>
+				            <p>Content content content content content content content content content content content content content content content content content content content content content content .</p>
+				        </div>
+				 
+				        <div id="tab2" class="tab">
+				            <p>Tab #2 content goes here!</p>
+				            <p>Content content content content content content content content content content content content content content content content content content content content content content .</p>
+				        </div>
+				 
+				        <div id="tab3" class="tab">
+				            <p>Tab #3 content goes here!</p>
+				            <p>Content content content content content content content content content content content content content content content content content content content content content content .</p>
+				        </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="grid-3-of-3">
+				<div class="code">
+<pre class="prettyprint" style="border:none;">
+	&lt;div class="tab-panel"&gt;
+		&lt;ul class="tab-links"&gt;
+			&lt;li class="active" rel="tab1"&gt;Tab1&lt;/li&gt;
+			&lt;li rel="tab2"&gt;Tab2&lt;/li&gt;
+			&lt;li rel="tab3"&gt;Tab3&lt;/li&gt;
+			
+		&lt;/ul&gt;
+		&lt;div class="tab-content"&gt;
+	        &lt;div id="tab1" class="tab active"&gt;
+	            &lt;p&gt;Tab #1 content goes here!&lt;/p&gt;
+	            &lt;p&gt;Content 1&lt;/p&gt;
+	        &lt;/div&gt;
+	 
+	        &lt;div id="tab2" class="tab"&gt;
+	            &lt;p&gt;Tab #2 content goes here!&lt;/p&gt;
+	            &lt;p&gt;Content 2&lt;/p&gt;
+	        &lt;/div&gt;
+	 
+	        &lt;div id="tab3" class="tab"&gt;
+	            &lt;p&gt;Tab #3 content goes here!&lt;/p&gt;
+	            &lt;p&gt;Content 3&lt;/p&gt;
+	        &lt;/div&gt;
+	    &lt;/div&gt;
+	&lt;/div&gt;
+				</pre>
+				</div>
+			</div>
+		</div>
+		<!-- End Tabs -->
+</dv>
+</div><!-- container -->
+<footer>
+	<div class="container">
+		<div class="content">
+			<p>Created by : Glue</p>
+			 <p>Contact information: <a href="mailto:glueframework11@gmail.com">
+			  Mail</a> or <a target="blank" href="https://www.facebook.com/vietps3">Facebook</a></p>
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>
